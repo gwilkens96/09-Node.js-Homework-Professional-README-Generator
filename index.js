@@ -18,14 +18,16 @@ inquirer
     },
     {
         type: 'number',
-        name: 'table-of-contents',
+        name: 'table',
         message: 'How many sections in your table of contents?'
     },
     {
         type: 'input',
         name: 'sections',
-        message: 'What are the titles of your sections separated by commas?'
-
+        message: 'What are the titles of your sections separated by commas?',
+        when: function(answers) {
+            return answers.table !== 0;
+        }
     },
     {
         type: 'input',
@@ -48,13 +50,25 @@ inquirer
         message: 'Please provide examples on how to test your project:'
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'licenses',
-        message: 'Please check all licenses used in your project:',
-        choices: ['Apache', 'Boost', 'BSD', 'Creative Commons', 'Eclipse', 'GNU', 'IBM', 'MIT', 'Mozilla', 'Open Data Commons', 'Perl', 'SIL', 'Unlicense', 'WTFPL', 'Zlib']
-    }
+        message: 'Please check the licence used in your project:',
+        choices: ['Apache 2.0', 'BSD 3', 'GPL 3.0', 'MIT']
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub Username',
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address',
+      },
+
   ]).then((answers) => {
-      console.log(JSON.stringify(answers));
+    const readMePageContent = generateMarkdown(answers);
+    console.log(readMePageContent);
   });
         
 
