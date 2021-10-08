@@ -17,19 +17,6 @@ inquirer
         message: 'Please give a brief description of your project:'
     },
     {
-        type: 'number',
-        name: 'table',
-        message: 'How many sections in your table of contents?'
-    },
-    {
-        type: 'input',
-        name: 'sections',
-        message: 'What are the titles of your sections separated by commas?',
-        when: function(answers) {
-            return answers.table !== 0;
-        }
-    },
-    {
         type: 'input',
         name: 'installation',
         message: 'Please give instructions on how to install your project:'
