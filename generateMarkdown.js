@@ -9,7 +9,7 @@ function renderLicenseBadge(license) {
       case 'GPL 3.0':
         return 'https://img.shields.io/badge/License-GPLv3-blue.svg';
       case 'MIT':
-        return 'https://img.shields.io/badge/License-MIT-yellow.svg';
+        return 'https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
         case '':
           break;
   }
@@ -55,7 +55,7 @@ function generateMarkdown(data) {
   let licenseLink = renderLicenseLink(data.licenses);
   let licenseSection = renderLicenseSection(data.licenses)
   return `# ${data.title}
-  [![License: [${licenseBadge}]
+  ${licenseBadge}
   
   ## Description
 
@@ -90,9 +90,8 @@ ${data.tests}
 
 ## Questions
 
-If you have any questions, please email me at ${data.email}, or find me on github.com as ${data.github}.
-
-
+If you have any questions, please email me at ${data.email}
+Find me on github.com: ${data.github}.
 `;
 }
 
