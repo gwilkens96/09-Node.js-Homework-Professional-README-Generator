@@ -55,6 +55,7 @@ function generateMarkdown(data) {
   let licenseLink = renderLicenseLink(data.licenses);
   return `# ${data.title}
   [![License: ${licenseLink}] [${licenseBadge}]
+
 `;
 }
 

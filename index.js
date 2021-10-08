@@ -60,10 +60,19 @@ inquirer
         
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.log(err) : console.log('Successfully generated README!')
+  );
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((answers)) 
+            writeToFile('./GeneratedREADME/README.md', generateMarkdown(answers));
+        };
 
 // Function call to initialize app
 init();
