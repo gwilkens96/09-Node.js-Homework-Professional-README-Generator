@@ -23,7 +23,7 @@ inquirer
     },
     {
         type: 'input',
-        name: 'usage-info',
+        name: 'usageInfo',
         message: 'Please give instructions and examples on how to use your project:'
     },
     {
@@ -71,6 +71,5 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {}
-
 // Function call to initialize app
 init();
