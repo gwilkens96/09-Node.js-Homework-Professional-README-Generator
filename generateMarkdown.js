@@ -10,8 +10,8 @@ function renderLicenseBadge(license) {
         return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
       case 'MIT':
         return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-        case '':
-          break;
+        case 'none':
+          return '';
   }
 }
 
@@ -27,8 +27,8 @@ function renderLicenseLink(license) {
       return 'https://www.gnu.org/licenses/gpl-3.0';
     case 'MIT':
       return 'https://opensource.org/licenses/MIT';
-    case '':
-      break;
+    case 'none':
+      return '';
   }
 }
 
@@ -44,8 +44,8 @@ function renderLicenseSection(license) {
       return 'GPL 3.0';
     case 'MIT':
       return 'MIT';
-    case '':
-      break;
+    case 'none':
+      return '';
   }
 }
 
