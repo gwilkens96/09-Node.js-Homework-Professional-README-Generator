@@ -18,15 +18,15 @@ npm install
 
 ## Usage
 
-Simply answer the questions prompted by the app. Example will be included here:
+Simply answer the questions prompted by the app. Example will be included here: https://drive.google.com/file/d/1gBjWkUyon-dzE4-uUDqdWftjb7sjqi8M/view?usp=sharing
 
 ## License
 
- 
+ None
 
 ## Credits
 
-none
+None
 
 ## Tests
 
@@ -36,4 +36,4 @@ npm test
 
 If you have any questions, please email me at gwilkens96@protonmail.com
 
-Find me on github.com: gwilkens96.
+Find me on github.com: gwilkens96
